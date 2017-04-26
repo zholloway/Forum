@@ -12,15 +12,11 @@
 @foreach (var post in Model)
 {
     <div class="media row">   
-            <div class="media-left col-md-1">
-                <a href="#">
-                    <img class="media-object" src="..." alt="...">
-                </a>                    
-            </div>
             <div class="col-md-1">
-                <span>@post.NumberOfVotes upvotes</span>
+                <img class="media-object img-responsive" src="~/Images/alexjones.jpg"/>                  
             </div>
-            <div class="media-body col-md-10">
+            @Html.Partial("_voteCounter")
+            <div class="media-body col-md-9">
                 <h4 class="media-heading"><a href="~/Posts/Details?Id=@post.ID">@post.Title</a></h4>
                 @{ var name = String.Empty;}
                 @if (HttpContext.Current.User.Identity.IsAuthenticated)
