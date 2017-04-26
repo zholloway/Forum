@@ -44,11 +44,12 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NumberOfVotes)
+            Vote Count
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NumberOfVotes)
+            @{ var count = Model.UpVotes - Model.DownVotes;}
+            @count
         </dd>
 
         <dt>

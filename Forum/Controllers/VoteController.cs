@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Forum.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,15 +9,24 @@ namespace Forum.Controllers
 {
     public class VoteController : Controller
     {
-       
-        public ActionResult Get()
+        ApplicationDbContext Database = new ApplicationDbContext();
+
+        public ActionResult UpVote(int id)
         {
-            return View();
+            var post = Database.Posts.First(f => f.ID == id);
+            post.UpVotes++;
+            Database.SaveChanges();
+
+            return PartialView("_voteCounter", post);
         }
 
-        public ActionResult Put()
+        public ActionResult DownVote(int id)
         {
-            return View();
+            var post = Database.Posts.First(f => f.ID == id);
+            post.DownVotes++;
+            Database.SaveChanges();
+
+            return PartialView("_voteCounter", post);
         }
     }
 }

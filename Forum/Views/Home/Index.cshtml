@@ -15,7 +15,9 @@
             <div class="col-md-1">
                 <img class="media-object img-responsive" src="~/Images/alexjones.jpg"/>                  
             </div>
-            @Html.Partial("_voteCounter")
+            <div class="col-md-2" >
+                @Html.Partial("_voteCounter", post)
+            </div>         
             <div class="media-body col-md-9">
                 <h4 class="media-heading"><a href="~/Posts/Details?Id=@post.ID">@post.Title</a></h4>
                 @{ var name = String.Empty;}
@@ -27,7 +29,7 @@
                 }
                 <span>Submitted @post.DatePosted.ToShortDateString() by @name</span>
             </div>
-    </div>
+        </div>
 }
 
 <li class="list-group-item disabled">
