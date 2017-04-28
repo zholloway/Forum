@@ -1,14 +1,14 @@
-namespace redditTakeTwo.Migrations
+namespace Forum.Migrations
 {
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
-    using redditTakeTwo.Models;
+    using Forum.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<redditTakeTwo.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Forum.Models.ApplicationDbContext>
     {
         public Configuration()
         {
@@ -16,7 +16,7 @@ namespace redditTakeTwo.Migrations
             ContextKey = "redditTakeTwo.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(redditTakeTwo.Models.ApplicationDbContext context)
+        protected override void Seed(Forum.Models.ApplicationDbContext context)
         {
             var userRole = "user";
             var adminRole = "admin";
