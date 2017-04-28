@@ -24,7 +24,7 @@
             @Html.DisplayNameFor(model => model.DatePosted)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NumberOfVotes)
+            Vote Count
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Body)
@@ -32,7 +32,8 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Title)
@@ -51,7 +52,8 @@
             @Html.DisplayFor(modelItem => item.DatePosted)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.NumberOfVotes)
+            @{var count = item.UpVoteCount - item.DownVoteCount;}
+            @count
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Body)
