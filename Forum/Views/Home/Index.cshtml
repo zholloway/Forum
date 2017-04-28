@@ -51,6 +51,91 @@
         </ul>
     </div>
 </li>
+
+<div class="panel panel-primary">
+    <div class="panel panel-heading">
+        @Html.ActionLink("Create New", "Create", "Posts", null, new { @class = "btn btn-default" })
+    </div>
+    @foreach (var post in Model)
+    {
+        <div class="row">
+            <div class="col-md-2" id="voteContainer-@post.ID">
+                @Html.Partial("_voteCounter", post)
+            </div>
+            <div class="col-md-10">
+                <div class="media">
+                    <div class="media-left">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-body">
+            <div class="img-responsive col-md-1">
+
+                <img class="media-object img-responsive" src="~/Images/alexjones.jpg" />
+
+                <!--if (post.Img == null)
+                {
+                    <img src="https://cdn.worldvectorlogo.com/logos/reddit-2.svg" height="60" />
+                }
+                else
+                {
+                    <img src="post.Img" height="60" />
+                }-->
+            </div>
+            @if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                var db = new ApplicationDbContext();
+                if (post.ID != null)
+                {
+                    var users = db.Users.First(f => f.Id == post.UserID);
+                    <h6><strong>@users.UserName</strong></h6>
+                }
+            }
+            <div class="col-md-11">
+                <div class="col-md-5">
+                    <h4>@post.Title</h4>
+                    <h6>@post.Body</h6>
+                </div>
+                <div class="col-md-3">
+                    <h6>@post.DatePosted</h6>
+                </div>
+                <div class="col-md-offset-8">
+                    <span class="badge">@post.UpVoteCount UpVotes</span>
+                    <span class="badge">@post.DownVoteCount DownVotes</span>
+                </div>
+                <div class="col-md-offset-11">
+                    <h6>@Html.ActionLink("Edit", "Edit", "Posts", new { id = post.ID }, null)</h6>
+                    <h6>@Html.ActionLink("Details", "Details", "Posts", new { id = post.ID }, null)</h6>
+                    <h6>@Html.ActionLink("Delete", "Delete", "Posts", new { id = post.ID }, null)</h6>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="text-center">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li>@Html.ActionLink("1", "Index", new { pageNum = 1 })</li>
+                <li>@Html.ActionLink("2", "Index", new { pageNum = 2 })</li>
+                <li>@Html.ActionLink("3", "Index", new { pageNum = 3 })</li>
+                <li>@Html.ActionLink("4", "Index", new { pageNum = 4 })</li>
+
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
         
 
 
