@@ -5,54 +5,23 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 
-<p>@Html.ActionLink("Make a New Post", "Create", "Posts")</p>
-
-@foreach (var post in Model)
-{
-    <div class="media row">   
-            <div class="col-md-1">
-                <img class="media-object img-responsive" src="~/Images/alexjones.jpg"/>                  
-            </div>
-            <div class="col-md-2" >
-                @Html.Partial("_voteCounter", post)
-            </div>         
-            <div class="media-body col-md-9">
-                <h4 class="media-heading"><a href="~/Posts/Details?Id=@post.ID">@post.Title</a></h4>
-                @{ var name = String.Empty;}
-                @if (HttpContext.Current.User.Identity.IsAuthenticated)
-                {
-                    ApplicationDbContext db = new ApplicationDbContext();
-                    var user = db.Users.First(z => z.Id == post.UserID);
-                    name = user.UserName;
-                }
-                <span>Submitted @post.DatePosted.ToShortDateString() by @name</span>
-            </div>
-        </div>
-}
-
-<li class="list-group-item disabled">
-    <div class=" text-center">
-        <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        
-        <li><a href="~/Home/Index?pageIndex=1">1</a></li>
-
-        <li><a href="~/Home/Index?pageIndex=2">2</a></li>
-
-        <li><a href="~/Home/Index?pageIndex=3">3</a></li>
-
-        <li><a href="~/Home/Index?pageIndex=4">4</a></li>
-
-        <li><a ifef="~/Home/Index?pageIndex=5">5</a></li>
-
-        <li><a href="#">&raquo;</a></li>
-        </ul>
+<div class="splash">
+    <div class="JoinUs">
+        <h3>Join the Stack Overflow Community.</h3>
     </div>
-</li>
+    <div>
+        <p>Stack Overflow is a community of 7.1 million programmers, just like you, helping each other.
+        Join them; it only takes a minute:</p>
+    </div>
+    <div>
+        @Html.ActionLink("Join Now", "Register", "Account", null, new { @class = "btn btn-default" })
+    </div>
+</div>
 
-<div class="panel panel-primary">
+<div><p></p></div>
+
+<div class="panel panel-default">
     <div class="panel panel-heading">
         @Html.ActionLink("Create New", "Create", "Posts", null, new { @class = "btn btn-default" })
     </div>
@@ -73,11 +42,10 @@
         <div class="panel panel-body">
             <div class="img-responsive col-md-1">
 
-                <img class="media-object img-responsive" src="~/Images/alexjones.jpg" />
 
                 @if (post.Img == null)
                 {
-                    <img src="https://cdn.worldvectorlogo.com/logos/reddit-2.svg" height="60" />
+                    <img src="~/Images/alexjones.jpg" height="60" />
                 }
                 else
                 {

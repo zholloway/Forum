@@ -22,3 +22,30 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+
+.navbar-fixed-top {
+    border-top: 3px solid #F48024;
+    background-color: #f9f8f7;
+}
+
+.navbar-inverse {
+
+}
+
+.splash {
+    background-color: #f9f8f7;
+    border-bottom: 2px solid lightblue;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+
+}
+
+
