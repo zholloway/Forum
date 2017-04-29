@@ -197,8 +197,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201704291345428_tryingToAddImgToPoco.cs" />
-    <Compile Include="Migrations\201704291345428_tryingToAddImgToPoco.Designer.cs">
-      <DependentUpon>201704291345428_tryingToAddImgToPoco.cs</DependentUpon>
+    <Compile Include="Migrations\201704291352439_PocoChange.cs" />
+    <Compile Include="Migrations\201704291352439_PocoChange.Designer.cs">
+      <DependentUpon>201704291352439_PocoChange.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -295,8 +296,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704291345428_tryingToAddImgToPoco.resx">
-      <DependentUpon>201704291345428_tryingToAddImgToPoco.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704291352439_PocoChange.resx">
+      <DependentUpon>201704291352439_PocoChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
