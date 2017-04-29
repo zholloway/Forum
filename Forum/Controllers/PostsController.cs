@@ -17,6 +17,11 @@ namespace Forum.Controllers
         // GET: Posts
         public ActionResult Index()
         {
+            if (HttpContext.User.Identity.IsAuthenticated)
+            {
+                ViewBag.IsAdmin = HttpContext.User.IsInRole("admin");
+                ViewBag.IsAdmin = HttpContext.User.IsInRole("user");
+            }
             return View(db.Posts.ToList());
         }
 
@@ -36,8 +41,10 @@ namespace Forum.Controllers
         }
 
         // GET: Posts/Create
+        [Authorize(Roles = "admin, user")]
         public ActionResult Create()
         {
+            
             return View();
         }
 
@@ -59,6 +66,7 @@ namespace Forum.Controllers
         }
 
         // GET: Posts/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,6 +84,7 @@ namespace Forum.Controllers
         // POST: Posts/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Title,Username,DatePosted,NumberOfVotes,Body")] Post post)
@@ -89,6 +98,7 @@ namespace Forum.Controllers
             return View(post);
         }
 
+        [Authorize(Roles = "admin")]
         // GET: Posts/Delete/5
         public ActionResult Delete(int? id)
         {
