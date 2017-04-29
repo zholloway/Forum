@@ -48,4 +48,12 @@ textarea {
 
 }
 
+#colorstrip {
+    width: 2%;
+    height: 2px;
+    border-style: solid;
+    border-color: #F48024;
+    margin-bottom: 10px;
+}
+
 
