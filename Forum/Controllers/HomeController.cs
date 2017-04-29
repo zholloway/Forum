@@ -11,7 +11,7 @@ namespace Forum.Controllers
     {
         public ApplicationDbContext Database = new ApplicationDbContext();
 
-        public ActionResult Index(int pageIndex = 1, int pageSize = 5)
+        public ActionResult Index(int pageIndex = 1, int pageSize = 10)
         {
             ViewBag.currentPage = pageIndex;
 
