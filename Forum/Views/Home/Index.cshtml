@@ -75,14 +75,14 @@
 
                 <img class="media-object img-responsive" src="~/Images/alexjones.jpg" />
 
-                <!--if (post.Img == null)
+                @if (post.Img == null)
                 {
                     <img src="https://cdn.worldvectorlogo.com/logos/reddit-2.svg" height="60" />
                 }
                 else
                 {
-                    <img src="post.Img" height="60" />
-                }-->
+                    <img src="@post.Img" height="60" />
+                }
             </div>
             @if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
@@ -116,21 +116,19 @@
     <div class="text-center">
         <nav aria-label="Page navigation">
             <ul class="pagination">
-                <li>
-                    <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li>@Html.ActionLink("1", "Index", new { pageNum = 1 })</li>
-                <li>@Html.ActionLink("2", "Index", new { pageNum = 2 })</li>
-                <li>@Html.ActionLink("3", "Index", new { pageNum = 3 })</li>
-                <li>@Html.ActionLink("4", "Index", new { pageNum = 4 })</li>
+                <li><a href="#">&laquo;</a></li>
 
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
+                <li><a href="~/Home/Index?pageIndex=1">1</a></li>
+
+                <li><a href="~/Home/Index?pageIndex=2">2</a></li>
+
+                <li><a href="~/Home/Index?pageIndex=3">3</a></li>
+
+                <li><a href="~/Home/Index?pageIndex=4">4</a></li>
+
+                <li><a ifef="~/Home/Index?pageIndex=5">5</a></li>
+
+                <li><a href="#">&raquo;</a></li>
             </ul>
         </nav>
     </div>

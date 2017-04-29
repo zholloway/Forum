@@ -7,13 +7,13 @@ namespace Forum.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class fg : IMigrationMetadata
+    public sealed partial class tryingToAddImgToPoco : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(fg));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(tryingToAddImgToPoco));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704221541483_fg"; }
+            get { return "201704291345428_tryingToAddImgToPoco"; }
         }
         
         string IMigrationMetadata.Source

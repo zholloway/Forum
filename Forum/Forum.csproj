@@ -196,34 +196,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704221531001_k.cs" />
-    <Compile Include="Migrations\201704221531001_k.Designer.cs">
-      <DependentUpon>201704221531001_k.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704221536525_d.cs" />
-    <Compile Include="Migrations\201704221536525_d.Designer.cs">
-      <DependentUpon>201704221536525_d.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704221541483_fg.cs" />
-    <Compile Include="Migrations\201704221541483_fg.Designer.cs">
-      <DependentUpon>201704221541483_fg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704221755238_alsdkfj.cs" />
-    <Compile Include="Migrations\201704221755238_alsdkfj.Designer.cs">
-      <DependentUpon>201704221755238_alsdkfj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704261725180_votes.cs" />
-    <Compile Include="Migrations\201704261725180_votes.Designer.cs">
-      <DependentUpon>201704261725180_votes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704282052564_Comments tied to User\Posts.cs" />
-    <Compile Include="Migrations\201704282055584_ads.cs" />
-    <Compile Include="Migrations\201704282055584_ads.Designer.cs">
-      <DependentUpon>201704282055584_ads.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704282116089_forumMigration.cs" />
-    <Compile Include="Migrations\201704282116089_forumMigration.Designer.cs">
-      <DependentUpon>201704282116089_forumMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201704291345428_tryingToAddImgToPoco.cs" />
+    <Compile Include="Migrations\201704291345428_tryingToAddImgToPoco.Designer.cs">
+      <DependentUpon>201704291345428_tryingToAddImgToPoco.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -320,26 +295,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704221531001_k.resx">
-      <DependentUpon>201704221531001_k.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704221536525_d.resx">
-      <DependentUpon>201704221536525_d.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704221541483_fg.resx">
-      <DependentUpon>201704221541483_fg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704221755238_alsdkfj.resx">
-      <DependentUpon>201704221755238_alsdkfj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704261725180_votes.resx">
-      <DependentUpon>201704261725180_votes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704282055584_ads.resx">
-      <DependentUpon>201704282055584_ads.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704282116089_forumMigration.resx">
-      <DependentUpon>201704282116089_forumMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704291345428_tryingToAddImgToPoco.resx">
+      <DependentUpon>201704291345428_tryingToAddImgToPoco.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
