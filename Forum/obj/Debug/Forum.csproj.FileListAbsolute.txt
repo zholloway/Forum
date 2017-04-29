@@ -199,3 +199,5 @@ C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.dll
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.pdb
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.PocoChange.resources
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.asdf.resources
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.asdf1.resources

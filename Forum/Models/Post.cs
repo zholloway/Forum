@@ -14,7 +14,6 @@ namespace Forum.Models
         public int? UpVoteCount { get; set; } = 1;
         public int? DownVoteCount { get; set; } = 0;
         public string Body { get; set; }
-
         public List<Comment> Comments { get; set; }
 
         public string UserID { get; set; }

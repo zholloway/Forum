@@ -1,0 +1,17 @@
+﻿@model Forum.Models.Comment
+@using Forum.Models;
+
+@{ 
+    ApplicationDbContext Database = new ApplicationDbContext();
+    var user = Database.Users.First(f => f.Id == Model.UserID);
+    var name = user.UserName;
+}
+\
+<div class="col-md-11">
+    <span>@Model.Body</span>
+    <div class="row">
+        <a href="...">share</a>
+        <a href="...">edit</a>
+        <span>@name</span>
+    </div>
+</div>
