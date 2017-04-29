@@ -15,6 +15,7 @@ namespace Forum.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Posts
+        [Authorize(Roles = "admin, user")]
         public ActionResult Index()
         {
             if (HttpContext.User.Identity.IsAuthenticated)
@@ -26,6 +27,7 @@ namespace Forum.Controllers
         }
 
         // GET: Posts/Details/5
+        [Authorize(Roles = "admin, user")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -57,7 +59,8 @@ namespace Forum.Controllers
             var post = new Post {
                 Title = collection["Title"],
                 Body = collection["Body"],
-                UserID = collection["UserID"]
+                UserID = collection["UserID"],
+                Img = collection["Img"]
             };
             db.Posts.Add(post);
             db.SaveChanges();
