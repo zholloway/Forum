@@ -75,23 +75,29 @@
 </p>
 
 <hr />
-@{ 
+@{
     var Database = new ApplicationDbContext();
     var commentList = Database.Comments.Where(w => w.PostID == Model.ID);
 }
-    <div>
+<div class="partialContainer">
+    <div class="row">
         @foreach (var comment in commentList)
         {
-            <div class="cold-md-1">
+            <div class="col-md-3">
                 @Html.Partial("_voteCounter", Model)
             </div>
-            @Html.Partial("_Comment", comment)
+            <div class="col-md-9">
+                @Html.Partial("_Comment", comment)
+            </div>
         }
     </div>
 
-<form method="post" action="~/Comments/Create">
-    <textarea name="commentBody" rows="10" cols="10"></textarea>
-    <input type="text" name="userID" value="@Model.UserID" class="hidden" />
-    <input type="text" name="postID" value="@Model.ID" class="hidden" />
-    <input type="submit" value="Post Comment" />
-</form>
+    <div>
+        <form method="post" action="~/Comments/Create">
+            <textarea name="commentBody" rows="10" cols="10"></textarea>
+            <input type="text" name="userID" value="@Model.UserID" class="hidden" />
+            <input type="text" name="postID" value="@Model.ID" class="hidden" />
+            <input type="submit" value="Post Comment" />
+        </form>
+    </div>
+</div>

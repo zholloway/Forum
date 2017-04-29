@@ -6,12 +6,29 @@
     var user = Database.Users.First(f => f.Id == Model.UserID);
     var name = user.UserName;
 }
-\
-<div class="col-md-11">
-    <span>@Model.Body</span>
-    <div class="row">
+
+<!--<ul class="CommentChunk">
+    <li class="list-group-item">@Model.Body
+    @name
         <a href="...">share</a>
         <a href="...">edit</a>
-        <span>@name</span>
+    </li>
+
+</ul>-->
+
+
+
+<div class="commentChunk">
+    <div class="col-md-offset-3">
+        <p>@Model.Body</p>
     </div>
+    <div>
+        <div class="col-md-offset-1">
+            <a href="...">share</a>
+            <a href="...">edit</a>
+        </div>
+        <div class="col-md-offset-9">
+            <p>@name</p>
+        </div>       
+    </div>  
 </div>

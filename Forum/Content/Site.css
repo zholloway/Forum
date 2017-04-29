@@ -35,7 +35,7 @@ textarea {
 }
 
 .splash {
-    background-color: #f9f8f7;
+    background-color: #v;
     border-bottom: 2px solid lightblue;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -56,4 +56,23 @@ textarea {
     margin-bottom: 10px;
 }
 
+.partialContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px;
+}
 
+.row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.commentChunk {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f9f8f7;
+}
