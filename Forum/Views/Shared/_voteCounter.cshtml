@@ -5,4 +5,12 @@
 }
 
 
-    <button onclick="upVote(@Model.ID);">^</button><span>@voteCounter</span><button onclick="downVote(@Model.ID);">v</button>
+<button btn="btn btn-link" onclick="upVote(@Model.ID);">
+    <i class="glyphicon glyphicon-arrow-up"></i>
+</button>
+
+<span>@(Model.UpVoteCount - Model.DownVoteCount)</span>
+
+<button btn="btn btn-link" onclick="downVote(@Model.ID);">
+    <i class="glyphicon glyphicon-arrow-down"></i>
+</button>
