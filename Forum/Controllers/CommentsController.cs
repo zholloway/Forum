@@ -25,7 +25,7 @@ namespace Forum.Controllers
             post.Comments.Add(newComment);
             Database.SaveChanges();
 
-            return PartialView("_Comment", newComment);
+            return RedirectToAction("Details", "Posts", new {id = postID});
         }
     }
 }

@@ -59,12 +59,19 @@ namespace Forum.Controllers
             var post = new Post {
                 Title = collection["Title"],
                 Body = collection["Body"],
-                UserID = collection["UserID"],
-                Img = collection["Img"]
+                UserID = collection["UserID"]
             };
+            if(collection["Img"] == String.Empty)
+            {
+                post.Img = null;
+            } else
+            {
+                post.Img = collection["Img"];
+            }
+
             db.Posts.Add(post);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
 
         }
 

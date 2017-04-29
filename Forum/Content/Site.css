@@ -61,18 +61,62 @@ textarea {
     flex-direction: column;
     justify-content: flex-start;
     padding: 5px;
+    flex-wrap: nowrap;
 }
 
 .row {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: space-around;
+    flex-wrap: nowrap;
 }
 
 .commentChunk {
-    display: flex;
-    flex-direction: column;
+    padding: 10px;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: #f9f8f7;
+}
+
+.commentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.votes {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    margin-right: 40px;
+    height: 100px;
+}
+
+.comment {
+    width: 800px;
+}
+
+.linkbar {
+    margin-top: 20px;
+}
+
+.comment p {
+    padding: 0;
+    margin: 0;
+    text-align:left;
+}
+
+.votes span{
+    text-align: center;
+}
+
+.newComment form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newComment textarea{ 
+    width: 700px;
 }

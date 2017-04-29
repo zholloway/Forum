@@ -16,7 +16,7 @@ namespace Forum.Controllers
             ViewBag.currentPage = pageIndex;
 
             var list = Database.Posts
-                        .OrderBy(o => o.DatePosted)
+                        .OrderByDescending(o => o.DatePosted)
                         .Skip((pageIndex - 1) * pageSize)
                         .Take(pageSize).ToList();
 
