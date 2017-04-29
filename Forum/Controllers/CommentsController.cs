@@ -11,6 +11,7 @@ namespace Forum.Controllers
     {
         ApplicationDbContext Database = new ApplicationDbContext();
 
+        [Authorize(Roles = "admin, user")]
         [HttpPost]
         public ActionResult Create(string commentBody, string userID, int postID)
         {
