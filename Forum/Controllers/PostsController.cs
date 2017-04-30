@@ -16,14 +16,16 @@ namespace Forum.Controllers
 
         // GET: Posts
         [Authorize(Roles = "admin, user")]
-        public ActionResult Index()
+        public ActionResult Index(string searchParams)
         {
+            var results = db.Posts.Where(w => w.Title.Contains(searchParams)).ToList<Post>();
+
             if (HttpContext.User.Identity.IsAuthenticated)
             {
                 ViewBag.IsAdmin = HttpContext.User.IsInRole("admin");
                 ViewBag.IsAdmin = HttpContext.User.IsInRole("user");
             }
-            return View(db.Posts.ToList());
+            return View(results);
         }
 
         // GET: Posts/Details/5

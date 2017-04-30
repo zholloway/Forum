@@ -24,16 +24,18 @@
                     <li>@Html.ActionLink("Jobs", "About", "Home")</li>
                     <li>@Html.ActionLink("Documentation", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Tags", "Contact", "Home")</li>
-                            <div id="custom-search-input">
-                                <div id="search" class="input-group col-md-3">
-                                    <input type="text" class="  search-query form-control" placeholder="Search" />
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-danger" type="button">
-                                            <span class=" glyphicon glyphicon-search"></span>
-                                        </button>
-                                    </span>
+                            <form action="~/Posts/Index">
+                                <div id="custom-search-input">
+                                    <div id="search" class="input-group col-md-3">
+                                        <input type="text" name="searchParams" class="  search-query form-control" placeholder="Search" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-danger" type="submit">
+                                                <span class=" glyphicon glyphicon-search"></span>
+                                            </button>
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
+                           </form>
                     <img class="questionMark" src="https://www.ucbankmn.com/assets/content/mvOIrfMC/2016/07/29/icon_lg_questionmark.png" alt="Question" height="30"/>
                     <img class="bubble" src="https://d2i2zd9axwkr7h.cloudfront.net/img/speech-bubbles.png" alt="Alternate Text" height="30" />
                     @Html.Partial("_LoginPartial")

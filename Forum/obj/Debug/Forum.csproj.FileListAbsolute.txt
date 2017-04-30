@@ -94,13 +94,6 @@ c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\bin\Mic
 c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.csprojResolveAssemblyReference.cache
 c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.dll
 c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.pdb
-c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.Migrations.k.resources
-c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache
-c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.Migrations.d.resources
-c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.Migrations.fg.resources
-c:\users\zack holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.Migrations.alsdkfj.resources
-C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.Migrations.votes.resources
-C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.Migrations.ads.resources
 C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\ApplicationInsights.config
 C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\roslyn\csc.exe
 C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\roslyn\csc.exe.config
@@ -201,3 +194,5 @@ C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.PocoChang
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.asdf.resources
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.asdf1.resources
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.Migrations.l.resources
+C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache

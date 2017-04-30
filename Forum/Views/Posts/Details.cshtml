@@ -41,48 +41,46 @@
     </div>
  </div>   
  
-<div>   
-    <div>
-            @Html.DisplayFor(model => model.Img)
-    </div>
-</div>
-
-<div class="col-md-3">
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-</div>
-
 <div class="col-md-offset-9">
-    @{ var name = String.Empty;}
-    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+    <img src="@Html.DisplayFor(model => model.Img)" height="60" />
+</div>
+
+    <div class="col-md-3">
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+
+    <div class="col-md-offset-9">
+        @{ var name = String.Empty;}
+        @if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
                 ApplicationDbContext db = new ApplicationDbContext();
                 var user = db.Users.First(z => z.Id == Model.UserID);
                 name = user.UserName;
             }
-    @name
-</div>
+        @name
+    </div>
 
-<hr />
-@{
-    var Database = new ApplicationDbContext();
-    var commentList = Database.Comments.Where(w => w.PostID == Model.ID);
-}
-    
-        @foreach (var comment in commentList)
-        {
-            <div class="commentContainer">
-                <div class="votes">
-                    @Html.Partial("_voteCounter", Model)
-                </div>
-                <div class="comment">
-                    @Html.Partial("_Comment", comment)
-                </div>            
+    <hr />
+    @{
+        var Database = new ApplicationDbContext();
+        var commentList = Database.Comments.Where(w => w.PostID == Model.ID);
+    }
+
+    @foreach (var comment in commentList)
+    {
+        <div class="commentContainer">
+            <div class="votes">
+                @Html.Partial("_voteCounter", Model)
             </div>
+            <div class="comment">
+                @Html.Partial("_Comment", comment)
+            </div>
+        </div>
             <hr />
-        }
+    }
 
 
     <div class="newComment">
@@ -91,6 +89,6 @@
             <textarea name="commentBody" rows="10" cols="100" style="width:100%"></textarea>
             <input type="text" name="userID" value="@Model.UserID" class="hidden" />
             <input type="text" name="postID" value="@Model.ID" class="hidden" />
-            <input type="submit" value="Post Comment"/>
+            <input type="submit" value="Post Comment" />
         </form>
     </div>
