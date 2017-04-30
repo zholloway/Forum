@@ -189,6 +189,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
@@ -196,34 +197,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704221531001_k.cs" />
-    <Compile Include="Migrations\201704221531001_k.Designer.cs">
-      <DependentUpon>201704221531001_k.cs</DependentUpon>
+    <Compile Include="Migrations\201704291345428_tryingToAddImgToPoco.cs" />
+    <Compile Include="Migrations\201704291352439_PocoChange.cs" />
+    <Compile Include="Migrations\201704291352439_PocoChange.Designer.cs">
+      <DependentUpon>201704291352439_PocoChange.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704221536525_d.cs" />
-    <Compile Include="Migrations\201704221536525_d.Designer.cs">
-      <DependentUpon>201704221536525_d.cs</DependentUpon>
+    <Compile Include="Migrations\201704292021063_asdf.cs" />
+    <Compile Include="Migrations\201704292021063_asdf.Designer.cs">
+      <DependentUpon>201704292021063_asdf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704221541483_fg.cs" />
-    <Compile Include="Migrations\201704221541483_fg.Designer.cs">
-      <DependentUpon>201704221541483_fg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704221755238_alsdkfj.cs" />
-    <Compile Include="Migrations\201704221755238_alsdkfj.Designer.cs">
-      <DependentUpon>201704221755238_alsdkfj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704261725180_votes.cs" />
-    <Compile Include="Migrations\201704261725180_votes.Designer.cs">
-      <DependentUpon>201704261725180_votes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704282052564_Comments tied to User\Posts.cs" />
-    <Compile Include="Migrations\201704282055584_ads.cs" />
-    <Compile Include="Migrations\201704282055584_ads.Designer.cs">
-      <DependentUpon>201704282055584_ads.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201704282116089_forumMigration.cs" />
-    <Compile Include="Migrations\201704282116089_forumMigration.Designer.cs">
-      <DependentUpon>201704282116089_forumMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201704292023268_asdf1.cs" />
+    <Compile Include="Migrations\201704292023268_asdf1.Designer.cs">
+      <DependentUpon>201704292023268_asdf1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -299,9 +284,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Posts\Create.cshtml" />
     <Content Include="Views\Shared\_voteCounter.cshtml" />
+    <Content Include="Views\Shared\_Comment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Comments\" />
     <Folder Include="Views\Vote\" />
   </ItemGroup>
   <ItemGroup>
@@ -320,26 +307,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704221531001_k.resx">
-      <DependentUpon>201704221531001_k.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704291352439_PocoChange.resx">
+      <DependentUpon>201704291352439_PocoChange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704221536525_d.resx">
-      <DependentUpon>201704221536525_d.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704292021063_asdf.resx">
+      <DependentUpon>201704292021063_asdf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704221541483_fg.resx">
-      <DependentUpon>201704221541483_fg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704221755238_alsdkfj.resx">
-      <DependentUpon>201704221755238_alsdkfj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704261725180_votes.resx">
-      <DependentUpon>201704261725180_votes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704282055584_ads.resx">
-      <DependentUpon>201704282055584_ads.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201704282116089_forumMigration.resx">
-      <DependentUpon>201704282116089_forumMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201704292023268_asdf1.resx">
+      <DependentUpon>201704292023268_asdf1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

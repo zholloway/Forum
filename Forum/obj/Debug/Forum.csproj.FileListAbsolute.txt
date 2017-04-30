@@ -195,13 +195,9 @@ C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\Microsoft.AI.ServerTelemetryChan
 C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\Microsoft.AI.Web.xml
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.csprojResolveAssemblyReference.cache
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.k.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.d.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.fg.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.alsdkfj.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.votes.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.ads.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.dll
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.pdb
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.forumMigration.resources
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.PocoChange.resources
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.asdf.resources
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.asdf1.resources

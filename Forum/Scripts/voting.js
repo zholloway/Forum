@@ -15,19 +15,16 @@
     })
 }
 
-let downVote = (postID) => {
-    let data = {
-        id: postID
-    }
 
+let downVote = (postID) => {
     $.ajax({
         url: "/Vote/DownVote",
-        data: JSON.stringify(data),
+        data: JSON.stringify({ id: postId }),
         contentType: "application/json",
         type: "POST",
         dataType: "html",
         success: (newHtml) => {
-            $("#voteCounter").html(newHtml);
+            $("#voteCounter-").html(newHtml);
         }
     })
 }

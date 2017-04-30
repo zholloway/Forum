@@ -7,13 +7,13 @@ namespace Forum.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class alsdkfj : IMigrationMetadata
+    public sealed partial class asdf1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(alsdkfj));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(asdf1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704221755238_alsdkfj"; }
+            get { return "201704292023268_asdf1"; }
         }
         
         string IMigrationMetadata.Source

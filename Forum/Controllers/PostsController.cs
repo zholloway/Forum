@@ -15,12 +15,19 @@ namespace Forum.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Posts
+        [Authorize(Roles = "admin, user")]
         public ActionResult Index()
         {
+            if (HttpContext.User.Identity.IsAuthenticated)
+            {
+                ViewBag.IsAdmin = HttpContext.User.IsInRole("admin");
+                ViewBag.IsAdmin = HttpContext.User.IsInRole("user");
+            }
             return View(db.Posts.ToList());
         }
 
         // GET: Posts/Details/5
+        [Authorize(Roles = "admin, user")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,14 +43,17 @@ namespace Forum.Controllers
         }
 
         // GET: Posts/Create
+        [Authorize(Roles = "admin, user")]
         public ActionResult Create()
         {
+            
             return View();
         }
 
         // POST: Posts/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "admin, user")]
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -52,13 +62,22 @@ namespace Forum.Controllers
                 Body = collection["Body"],
                 UserID = collection["UserID"]
             };
+            if(collection["Img"] == String.Empty)
+            {
+                post.Img = null;
+            } else
+            {
+                post.Img = collection["Img"];
+            }
+
             db.Posts.Add(post);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
 
         }
 
         // GET: Posts/Edit/5
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -76,6 +95,7 @@ namespace Forum.Controllers
         // POST: Posts/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Title,Username,DatePosted,NumberOfVotes,Body")] Post post)
@@ -89,6 +109,7 @@ namespace Forum.Controllers
             return View(post);
         }
 
+        [Authorize(Roles = "admin")]
         // GET: Posts/Delete/5
         public ActionResult Delete(int? id)
         {

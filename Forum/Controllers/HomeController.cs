@@ -11,12 +11,12 @@ namespace Forum.Controllers
     {
         public ApplicationDbContext Database = new ApplicationDbContext();
 
-        public ActionResult Index(int pageIndex = 1, int pageSize = 1)
+        public ActionResult Index(int pageIndex = 1, int pageSize = 10)
         {
             ViewBag.currentPage = pageIndex;
 
             var list = Database.Posts
-                        .OrderBy(o => o.DatePosted)
+                        .OrderByDescending(o => o.DatePosted)
                         .Skip((pageIndex - 1) * pageSize)
                         .Take(pageSize).ToList();
 

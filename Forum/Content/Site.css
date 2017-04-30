@@ -16,9 +16,166 @@
     white-space: normal;
 }
 
+#search {
+    margin-top: 5px;
+}
+
+#logo {
+    margin-top: 5px;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 800px;
+}
+
+
+.postHead {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.postBody {
+    display: flex;
+
+}
+
+.navbar-fixed-top {
+    border-top: 3px solid #F48024;
+    background-color: #f9f8f7;
+    border-bottom: 1px solid lightgray;
+}
+
+.questionMark {
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+.bubble {
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+
+.navbar-inverse {
+
+}
+
+.navbar navbar-inverse navbar-fixed-top {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.container {
+    padding-top: 10px;
+}
+
+.splash {
+    background-color: #f9f8f7;
+    border-bottom: 2px solid lightblue;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#colorstrip {
+    width: 2%;
+    height: 2px;
+    border-style: solid;
+    border-color: #F48024;
+    margin-bottom: 10px;
+}
+
+.partialContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5px;
+    flex-wrap: nowrap;
+}
+
+.postContainer {
+    display: flex;
+}
+
+.userInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.commentChunk {
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f9f8f7;
+}
+
+.commentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.votes {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    margin-right: 40px;
+    height: 100px;
+}
+
+.comment {
+    width: 800px;
+}
+
+.linkbar {
+    margin-top: 20px;
+}
+
+.comment p {
+    padding: 0;
+    margin: 0;
+    text-align:left;
+}
+
+.votes span{
+    text-align: center;
+}
+
+.newComment form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newComment textarea{ 
+    width: 700px;
+}
+
+.titleAndBody {
+    margin-left: 20px;
+    margin-top: -20px;
 }

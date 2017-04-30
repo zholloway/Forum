@@ -1,0 +1,28 @@
+﻿@model Forum.Models.Comment
+@using Forum.Models;
+
+@{ 
+    ApplicationDbContext Database = new ApplicationDbContext();
+    var user = Database.Users.First(f => f.Id == Model.UserID);
+    var name = user.UserName;
+}
+
+<!--<ul class="CommentChunk">
+    <li class="list-group-item">@Model.Body
+    @name
+        <a href="...">share</a>
+        <a href="...">edit</a>
+    </li>
+
+</ul>-->
+
+
+
+    <p>@Model.Body</p>
+    <div>
+        <div class="linkbar">
+            <a href="...">share</a>
+            <a href="...">edit</a>
+            <span class="pull-right">@name</span>
+        </div>       
+    </div>  

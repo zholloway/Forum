@@ -7,13 +7,13 @@ namespace Forum.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class votes : IMigrationMetadata
+    public sealed partial class asdf : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(votes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(asdf));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704261725180_votes"; }
+            get { return "201704292021063_asdf"; }
         }
         
         string IMigrationMetadata.Source
