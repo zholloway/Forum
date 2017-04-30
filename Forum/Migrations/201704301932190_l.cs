@@ -3,7 +3,7 @@ namespace Forum.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class tryingToAddImgToPoco : DbMigration
+    public partial class l : DbMigration
     {
         public override void Up()
         {
