@@ -17,7 +17,7 @@
         Join them; it only takes a minute:</p>
     </div>
     <div>
-        @Html.ActionLink("Join Now", "Register", "Account", null, new { @class = "btn btn-default" })
+        @Html.ActionLink("Sign Up", "Register", "Account", null, new { @class = "btn btn-primary" })
     </div>
 </div>
 
@@ -25,59 +25,50 @@
 
 <div class="panel panel-default">
     <div class="panel panel-heading">
-        @Html.ActionLink("Create New", "Create", "Posts", null, new { @class = "btn btn-default" })
+        <div class="col-md-offset-11">
+            @Html.ActionLink("Ask Question ", "Create", "Posts", null, new { @class = "btn btn-primary" })
+        </div>
     </div>
     @foreach (var post in Model)
     {
-        <div class="row">
-            <div class="col-md-2" id="voteContainer-@post.ID">
-                @Html.Partial("_voteCounter", post)
-            </div>
-            <div class="col-md-10">
-                <div class="media">
-                    <div class="media-left">
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="panel panel-body">
-            <div class="img-responsive col-md-1">
-                @if (post.Img == null)
-                {
-                    <img src="~/Images/alexjones.jpg" height="60" />
-                }
-                else
-                {
-                    <img src="@post.Img" height="60" />
-                }
-            </div>
-            @if (HttpContext.Current.User.Identity.IsAuthenticated)
-            {
-                var db = new ApplicationDbContext();
-                if (post.ID != null)
-                {
-                    var users = db.Users.First(f => f.Id == post.UserID);
-                    <h6><strong>@users.UserName</strong></h6>
-                }
-            }
-            <div class="col-md-11">
-                <div class="col-md-5">
-                    <h4>@post.Title</h4>
+            <div class="postContainer">
+                <div class="postVotes">
+                    @Html.Partial("_voteCounter", post)
+                </div>
+                <div class="titleAndBody">
+                    <h3>@Html.ActionLink(post.Title, "Details", "Posts", new { id = post.ID }, null)</h3>
                     <h6>@post.Body</h6>
-                </div>
-                <div class="col-md-3">
-                    <h6>@post.DatePosted</h6>
-                </div>
-                <div class="col-md-offset-8">
-                    <span class="badge">@post.UpVoteCount UpVotes</span>
-                    <span class="badge">@post.DownVoteCount DownVotes</span>
-                </div>
-                <div class="col-md-offset-11">
+                </div> 
+            </div>
+            <div class="userInfo">
+                <div class="adminAction">
                     <h6>@Html.ActionLink("Edit", "Edit", "Posts", new { id = post.ID }, null)</h6>
                     <h6>@Html.ActionLink("Details", "Details", "Posts", new { id = post.ID }, null)</h6>
                     <h6>@Html.ActionLink("Delete", "Delete", "Posts", new { id = post.ID }, null)</h6>
                 </div>
+               
+                <div>
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        var db = new ApplicationDbContext();
+                        if (post.ID != null)
+                        {
+                            var users = db.Users.First(f => f.Id == post.UserID);
+                            <h6><strong>@users.UserName</strong></h6>
+                            <h6>@post.DatePosted</h6>
+                        }
+                    }
+                    @if (post.Img == null)
+                    {
+                        <img src="~/Images/alexjones.jpg" width="50" />
+                    }
+                    else
+                    {
+                        <img src="@post.Img" height="60" />
+                    }
+                </div>
+                
             </div>
         </div>
     }
