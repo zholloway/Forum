@@ -190,7 +190,7 @@ C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\Microsoft.AI.Web.xml
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.csprojResolveAssemblyReference.cache
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.dll
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.pdb
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache
 C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.Migrations.l.resources
 C:\Users\Zack Holloway\documents\visual studio 2017\Projects\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.l.resources
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.Migrations.ForGearHost.resources
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Debug\Forum.csproj.GenerateResource.Cache

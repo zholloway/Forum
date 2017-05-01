@@ -95,4 +95,4 @@ C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.csprojResolveAssem
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.csproj.GenerateResource.Cache
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.dll
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.pdb
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.l.resources
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.ForGearHost.resources

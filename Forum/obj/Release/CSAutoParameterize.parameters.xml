@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=Localhost\SQLEXPRESS;Database=StackOverClone;Integrated Security=True" tags="SqlConnectionString">
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=mssql5.gear.host;Database=stackoverclone;Uid=stackoverclone;Pwd=Dw0q8IRj~e_9;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\jefflongo\\Source\\Repos\\Forum\\Forum\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>
