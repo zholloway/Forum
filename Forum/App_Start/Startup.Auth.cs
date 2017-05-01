@@ -50,9 +50,9 @@ namespace Forum
             //    clientId: "",
             //    clientSecret: "");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(
+               consumerKey: "tBMdKWYfYtC9YUIkjUiSTvXMD",
+               consumerSecret: "	v6F7e3xAElx8eEeCGyN8hcek8Y1i2IEEWhX5kDVKjl3rnoLBdS");
 
             //app.UseFacebookAuthentication(
             //   appId: "",
