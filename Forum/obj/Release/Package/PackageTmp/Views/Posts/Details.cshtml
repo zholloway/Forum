@@ -1,0 +1,96 @@
+﻿@model Forum.Models.Post
+@using Forum.Models
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+
+
+<div class="postHead">
+    <div>
+        <h2>@Html.DisplayFor(model => model.Title)</h2>
+    </div>
+    <div>
+        @Html.ActionLink("Ask Question ", "Create", "Posts", null, new { @class = "btn btn-primary" })
+    </div>
+</div>
+
+<hr />
+
+<div class="banner">
+    <div>
+        <img class="img-responsive" src="https://cdn.atlassbx.com/FB/11087213721374/AZR_Minutes_USA_728x90_BAN_1.jpg" alt="Alternate Text" />
+    </div>
+    <div>
+        <p>Asked @Html.DisplayFor(model => model.DatePosted)</p>
+    </div>
+</div>
+
+<p></p>
+
+<div class="postBody">   
+    <div class="votes">
+        @Html.Partial("_voteCounter", Model)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Body)
+    </div>
+ </div>   
+ 
+ 
+<div class="col-md-offset-9">
+    <img src="@Html.DisplayFor(model => model.Img)" height="60" />
+</div>
+
+
+<div class="col-md-3">
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
+
+<div class="col-md-offset-9">
+    @{ var name = String.Empty;}
+    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                ApplicationDbContext db = new ApplicationDbContext();
+                var user = db.Users.First(z => z.Id == Model.UserID);
+                name = user.UserName;
+            }
+    @name
+</div>
+
+<hr />
+@{
+    var Database = new ApplicationDbContext();
+    var commentList = Database.Comments.Where(w => w.PostID == Model.ID);
+}
+    
+        @foreach (var comment in commentList)
+        {
+            <div class="commentContainer">
+                <div class="votes">
+                    @Html.Partial("_voteCounter", Model)
+                </div>
+                <div class="comment">
+                    @Html.Partial("_Comment", comment)
+                </div>            
+            </div>
+            <hr />
+        }
+
+
+    <div class="newComment">
+        <h2>Your Answer</h2>
+        <form method="post" action="~/Comments/Create">
+            <textarea name="commentBody" rows="10" cols="100" style="width:100%"></textarea>
+            <input type="text" name="userID" value="@Model.UserID" class="hidden" />
+            <input type="text" name="postID" value="@Model.ID" class="hidden" />
+            <input type="submit" value="Post Comment"/>
+        </form>
+    </div>

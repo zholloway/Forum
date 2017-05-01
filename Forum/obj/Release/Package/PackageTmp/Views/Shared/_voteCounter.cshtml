@@ -1,0 +1,16 @@
+﻿@model Forum.Models.Post
+
+@{ 
+    var voteCounter = Model.UpVoteCount - Model.DownVoteCount;
+}
+
+
+<button btn="btn btn-link" onclick="upVote(@Model.ID);">
+    <i class="glyphicon glyphicon-arrow-up"></i>
+</button>
+
+<span>@voteCounter</span>
+
+<button btn="btn btn-link" onclick="downVote(@Model.ID);">
+    <i class="glyphicon glyphicon-arrow-down"></i>
+</button>

@@ -58,11 +58,11 @@ namespace Forum
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "434169613717-8vu5fbjtdvfumgr3cocjv0j28p1va118.apps.googleusercontent.com",
+                ClientSecret = "jo2SwnIPuPRsmVh1F_R_nLq1"
+            });
         }
     }
 }
