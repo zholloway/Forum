@@ -7,7 +7,7 @@ namespace Forum.Models
 {
     public class Post
     {
-        public int ID { get; set; }
+        public int? ID { get; set; }
         public string Title { get; set; }
         public string Img { get; set; }
         public DateTime DatePosted { get; set; } = DateTime.Now;

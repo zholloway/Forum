@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44378</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -197,9 +197,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201704301932190_l.cs" />
-    <Compile Include="Migrations\201704301932190_l.Designer.cs">
-      <DependentUpon>201704301932190_l.cs</DependentUpon>
+    <Compile Include="Migrations\201705012022385_ForGearHost.cs" />
+    <Compile Include="Migrations\201705012022385_ForGearHost.Designer.cs">
+      <DependentUpon>201705012022385_ForGearHost.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -223,6 +223,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\stackoverclone - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\stackoverclone - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -298,8 +300,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201704301932190_l.resx">
-      <DependentUpon>201704301932190_l.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705012022385_ForGearHost.resx">
+      <DependentUpon>201705012022385_ForGearHost.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

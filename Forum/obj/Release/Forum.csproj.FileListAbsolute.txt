@@ -92,13 +92,7 @@ C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\Microsoft.AI.ServerTelemetryChan
 C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\jefflongo\Source\Repos\Forum\Forum\bin\Microsoft.AI.Web.xml
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.csprojResolveAssemblyReference.cache
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.k.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.d.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.fg.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.alsdkfj.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.votes.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.ads.resources
-C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.forumMigration.resources
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.csproj.GenerateResource.Cache
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.dll
 C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.pdb
+C:\Users\jefflongo\Source\Repos\Forum\Forum\obj\Release\Forum.Migrations.ForGearHost.resources

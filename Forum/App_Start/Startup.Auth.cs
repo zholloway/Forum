@@ -6,6 +6,8 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Forum.Models;
+using Microsoft.Owin.Security.Twitter;
+using Microsoft.Owin.Security;
 
 namespace Forum
 {
@@ -50,19 +52,34 @@ namespace Forum
             //    clientId: "",
             //    clientSecret: "");
 
+            app.UseTwitterAuthentication(new TwitterAuthenticationOptions
+            {
+                ConsumerKey = "tBMdKWYfYtC9YUIkjUiSTvXMD",
+                ConsumerSecret = "v6F7e3xAElx8eEeCGyN8hcek8Y1i2IEEWhX5kDVKjl3rnoLBdS",
+                BackchannelCertificateValidator = new CertificateSubjectKeyIdentifierValidator(new[]
+    {
+        "A5EF0B11CEC04103A34A659048B21CE0572D7D47", // VeriSign Class 3 Secure Server CA - G2
+        "0D445C165344C1827E1D20AB25F40163D8BE79A5", // VeriSign Class 3 Secure Server CA - G3
+        "7FD365A7C2DDECBBF03009F34339FA02AF333133", // VeriSign Class 3 Public Primary Certification Authority - G5
+        "39A55D933676616E73A761DFA16A7E59CDE66FAD", // Symantec Class 3 Secure Server CA - G4
+        "5168FF90AF0207753CCCD9656462A212B859723B", //DigiCert SHA2 High Assurance Server C‎A 
+        "B13EC36903F8BF4701D498261A0802EF63642BC3" //DigiCert High Assurance EV Root CA
+    })
+            });
+
             //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+               //consumerKey: "tBMdKWYfYtC9YUIkjUiSTvXMD",
+               //consumerSecret: "	v6F7e3xAElx8eEeCGyN8hcek8Y1i2IEEWhX5kDVKjl3rnoLBdS");
 
             //app.UseFacebookAuthentication(
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "434169613717-8vu5fbjtdvfumgr3cocjv0j28p1va118.apps.googleusercontent.com",
+                ClientSecret = "jo2SwnIPuPRsmVh1F_R_nLq1"
+            });
         }
     }
 }
